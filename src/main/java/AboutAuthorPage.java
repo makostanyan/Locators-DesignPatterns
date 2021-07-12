@@ -25,10 +25,11 @@ public class AboutAuthorPage extends BasePage {
     }
 
     public void clickOnPriceFilter(){
-
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", sortBy);
         sortBy.click();
         wait.until(ExpectedConditions.elementToBeClickable(filterPrice));
         filterPrice.click();
+
     }
 
     public void waitUntilPageLoad(){

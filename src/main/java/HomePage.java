@@ -28,15 +28,13 @@ public class HomePage extends BasePage {
     }
 
     public void clickOnBookDepartment(){
-
-        searchDropdown.click();
+        actions.click(searchDropdown).build().perform();
         wait.until(ExpectedConditions.elementToBeClickable(booksDepartment));
         booksDepartment.click();
     }
 
     public void authorSearch(String authorName){
-
-        search.sendKeys(authorName, Keys.ENTER);
+        actions.sendKeys(search, authorName + Keys.ENTER).build().perform();
     }
 
     public void waitUntilPageLoad(){
