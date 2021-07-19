@@ -1,3 +1,4 @@
+import model.Author;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,8 +34,8 @@ public class HomePage extends BasePage {
         booksDepartment.click();
     }
 
-    public void authorSearch(String authorName){
-        actions.sendKeys(search, authorName + Keys.ENTER).build().perform();
+    public void authorSearch(Author author){
+        actions.sendKeys(search, author.getAuthorName() + Keys.ENTER).build().perform();
     }
 
     public void waitUntilPageLoad(){

@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-public class DeliveryCountryTest extends BaseChromeTest {
+public class DeliveryCountryTest extends BaseTest {
 
     @Test()
     public void deliveryToArmeniaTest(){

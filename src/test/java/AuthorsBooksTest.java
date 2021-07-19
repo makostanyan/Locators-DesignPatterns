@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-public class AuthorsBooksTest extends BaseChromeTest {
+public class AuthorsBooksTest extends BaseTest {
 
     @Test()
     public void authorBooksTest() {
@@ -11,10 +11,10 @@ public class AuthorsBooksTest extends BaseChromeTest {
                 "It is not delivery to Armenia");
         homePage.clickOnBookDepartment();
         homePage.waitUntilPageLoad();
-        homePage.authorSearch(authorName);
+        homePage.authorSearch(author);
         AuthorBooksPage authorBooksPage = new AuthorBooksPage(driver);
         authorBooksPage.waitUntilPageLoad();
-        softAssert.assertTrue(authorBooksPage.isAllBooksAuthors(authorName.toLowerCase()),
+        softAssert.assertTrue(authorBooksPage.isAllBooksAuthors(author.getAuthorName().toLowerCase()),
                 "Book was written by another author");
         softAssert.assertAll();
     }
