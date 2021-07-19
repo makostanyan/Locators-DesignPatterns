@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-public class AuthorsBooksTest extends BaseTest {
+public class AuthorsBooksTest extends BaseChromeTest {
 
     @Test()
     public void authorBooksTest() {
