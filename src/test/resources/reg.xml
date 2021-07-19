@@ -4,7 +4,7 @@
 <suite name="Parallel test" parallel="methods" thread-count="2">
     <test name="Parallel test run">
         <classes>
-            <class name="AuthorsBooksTest"></class>
+            <class name="SortBooksTest"></class>
         </classes>
     </test>
 </suite>

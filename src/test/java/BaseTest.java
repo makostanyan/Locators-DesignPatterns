@@ -8,8 +8,6 @@ import org.testng.asserts.SoftAssert;
 import service.AuthorService;
 import utils.TestListener;
 
-import java.net.MalformedURLException;
-
 @Listeners(TestListener.class)
 public class BaseTest {
 
@@ -18,7 +16,7 @@ public class BaseTest {
     Author author = AuthorService.authorData();
 
     @BeforeMethod
-    public void openPage() throws MalformedURLException {
+    public void openPage() {
 
         driver = DriverSingleton.getDriver();
         driver.get("https://www.amazon.com/");
