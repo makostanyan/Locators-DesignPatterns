@@ -14,9 +14,26 @@ public class AuthorBooksPage extends BasePage implements WaitHelper {
     List<WebElement> authorNameList;
     @FindBy(xpath = "//div[@class='a-row a-size-base a-color-secondary']//a[@class='a-size-base a-link-normal']")
     WebElement authorNameLink;
+    @FindBy(css = "[class='a-size-mini a-spacing-none a-color-base s-line-clamp-2']")
+    List<WebElement> bookName;
+
+    public WebElement getBookNameFromList(int index){
+        return bookName.get(index);
+    }
+
+    public List<WebElement> getBookName() {
+        return bookName;
+    }
 
     public AuthorBooksPage(WebDriver driver) {
         super(driver);
+    }
+    public WebElement getAuthorNameFromList(int index){
+        return authorNameList.get(index);
+    }
+
+    public List<WebElement> getAuthorNameList() {
+        return authorNameList;
     }
 
     public boolean isAllBooksAuthors(String authorName){

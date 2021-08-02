@@ -8,6 +8,6 @@ import io.cucumber.testng.CucumberOptions;
         monochrome = true,
         tags = "@smoke",
         glue = "steps",
-        features = "src/test/resources/Amazon/AuthorBooks.feature")
+        features = "src/test/resources/Amazon/BookName.feature")
 public class CucumberTestRunner extends AbstractTestNGCucumberTests {
 }
