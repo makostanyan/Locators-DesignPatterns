@@ -1,6 +1,7 @@
 package utils;
 
 import driver.DriverSingleton;
+import factory_method.DriverType;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,7 +25,7 @@ public class TestListener implements ITestListener {
 
     private void saveScreenshot() {
         File screenCapture = ((TakesScreenshot) DriverSingleton
-                .getDriver())
+                .getDriver(DriverType.CHROME))
                 .getScreenshotAs(OutputType.FILE);
         try {
             FileUtils.copyFile(screenCapture, new File(

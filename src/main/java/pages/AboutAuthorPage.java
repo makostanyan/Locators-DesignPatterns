@@ -1,9 +1,11 @@
+package pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class AboutAuthorPage extends BasePage {
+public class AboutAuthorPage extends BasePage implements WaitHelper {
 
     @FindBy(id = "authorBooksCarousel")
     WebElement booksCarousel;
@@ -32,6 +34,7 @@ public class AboutAuthorPage extends BasePage {
 
     }
 
+    @Override
     public void waitUntilPageLoad(){
 
         wait.until(ExpectedConditions.visibilityOf(booksCarousel));

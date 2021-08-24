@@ -1,3 +1,5 @@
+package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SortedBooksPage extends BasePage {
+public class SortedBooksPage extends BasePage implements WaitHelper{
 
     private final String pageLodLoc = "a-fixed-left-grid-col";
     @FindBy(className = pageLodLoc)
@@ -37,6 +39,7 @@ public class SortedBooksPage extends BasePage {
         } return true;
     }
 
+    @Override
     public void waitUntilPageLoad(){
 
         wait.until(ExpectedConditions.visibilityOf(pageLod));
